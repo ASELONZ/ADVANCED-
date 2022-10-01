@@ -1404,11 +1404,11 @@ async def auto_filter(client, msg, spoll=False):
       k = cap = f"Here is what i found for your query {mention} //n This message will be deleted in 1m. {search}"
     if imdb and imdb.get('poster'):
         try:
-         a = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
-             await asyncio.sleep(10)
-             await k.delete()
+            a = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
-        except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
+                await asyncio.sleep(10)
+                await a.delete()
+            except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             fmsg = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
@@ -1416,7 +1416,9 @@ async def auto_filter(client, msg, spoll=False):
             logger.exception(e)
             await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
-        await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        a = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(10)
+            await k.delete()
     if spoll:
         await msg.message.delete()
 
