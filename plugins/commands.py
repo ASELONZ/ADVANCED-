@@ -41,13 +41,14 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('💠 CHΛИИΞL 💠', url='https://t.me/MWUpdatez'),
-            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/OpusTechz')
+            InlineKeyboardButton(' Ⲥⲏⲇⲛⲛⲉⳑ ', url='https://t.me/defenderofthemultiverse'),
+            InlineKeyboardButton(' 𝘎𝘳𝘰𝘶𝘱 ', url='https://t.me/thewarriorsreal')
             ],[      
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
             InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
             ],[
-            InlineKeyboardButton('✅ SUBSCᏒIBΞ  ✅', url='https://youtube.com/channel/UCf_dVNrilcT0V2R--HbYpMA')
+            InlineKeyboardButton('Oɯɳҽɾ ', url='https://t.me/ANKIT3690'),
+            InlineKeyboardButton('Oɯɳҽɾ', url='https://t.me/Saurav3BV6SA9LLElon7Musk')
         ]]         
         reply_markup = InlineKeyboardMarkup(buttons)        
         await message.reply_photo(
@@ -84,13 +85,14 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('💠 CHΛИИΞL 💠', url='https://t.me/MWUpdatez'),
-            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/OpusTechz')
+            InlineKeyboardButton(' Ⲥⲏⲇⲛⲛⲉⳑ ', url='https://t.me/defenderofthemultiverse'),
+            InlineKeyboardButton(' 𝘎𝘳𝘰𝘶𝘱 ', url='https://t.me/thewarriorsreal')
             ],[      
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
             InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
             ],[
-            InlineKeyboardButton('✅ SUBSCᏒIBΞ  ✅', url='https://youtube.com/channel/UCf_dVNrilcT0V2R--HbYpMA')
+            InlineKeyboardButton('Oɯɳҽɾ ', url='https://t.me/ANKIT3690'),
+            InlineKeyboardButton('Oɯɳҽɾ', url='https://t.me/Saurav3BV6SA9LLElon7Musk')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -239,7 +241,7 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('sᴜʙsᴄʀɪʙᴇ', url='youtube.com/OpusTechz') ] ] ),
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('Joιɴ Oυr ɢroυp', url='https://t.me/thewarriorsreal ') ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
                     
