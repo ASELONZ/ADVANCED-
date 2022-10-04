@@ -1357,12 +1357,12 @@ async def auto_filter(client, msg, spoll=False):
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
-            [InlineKeyboardButton(text=f"🌹 𝗣𝗮𝗴𝗲 1/{round(int(total_results) / 10)}", callback_data="pages"),
+            [InlineKeyboardButton(text=f"𝗣𝗮𝗴𝗲 1/{round(int(total_results) / 10)}", callback_data="pages"),
              InlineKeyboardButton(text="𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
-            [InlineKeyboardButton(text="🌹 𝗣𝗮𝗴𝗲 1/1", callback_data="pages")]
+            [InlineKeyboardButton(text=" 𝗣𝗮𝗴𝗲 1/1", callback_data="pages")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
@@ -1401,13 +1401,13 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-      k = cap = f"Here is what i found for your query {mention} //n This message will be deleted in 1m. {search}"
+        cap = f"Here is what i found for your query {mention} This message will be deleted in 1m. {search}"
     if imdb and imdb.get('poster'):
         try:
-            a = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
-                                      reply_markup=InlineKeyboardMarkup(btn))
-                await asyncio.sleep(10)
-                await a.delete()
+           a = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
+                                              reply_markup=InlineKeyboardMarkup(btn))
+           await asyncio.sleep(60)
+           await a.delete()
             except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
@@ -1417,8 +1417,8 @@ async def auto_filter(client, msg, spoll=False):
             await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
         a = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(10)
-            await k.delete()
+        await asyncio.sleep(60)
+        await a.delete()
     if spoll:
         await msg.message.delete()
 
