@@ -9,6 +9,7 @@ BITLY_API = os.environ.get("BITLY_API", "8df1df8c23f719e5cf97788cc2d40321ea30092
 CUTTLY_API = os.environ.get("CUTTLY_API", "f64dffbde033b6c307387dd50b7c76e505f1c")
 SHORTCM_API = os.environ.get("SHORTCM_API", "pk_...NIZv")
 GPLINKS_API = os.environ.get("GPLINKS_API", "008ccaedd6061ad1948838f410947603de9007a7")
+SHAEREUS_API = os.environ.get("SHAREUS_API", "6kX9kr6x8wNoMVu6f2S2xAoLGT42")
 
 reply_markup = InlineKeyboardMarkup(
         [[
